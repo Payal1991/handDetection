@@ -30,7 +30,7 @@ function runDetection(){
         console.log(predictions);
         model.renderPredictions(predictions, canvas, context, video);
         if(predictions.length > 0){
-            //audio.play();
+            audio.play();
         }
     })
 }
