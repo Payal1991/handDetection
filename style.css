@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.videoframe{
+    display: flex;
+    width: 80%;
+    height: auto;
+    justify-content: space-around;
+    margin: 40px;
+}
+
+#video{
+    width: 480px !important;
+    height: 360px !important;
+}
+#canvas{
+    width: 480px;
+    height: 360px;
+}
