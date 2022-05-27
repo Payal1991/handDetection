@@ -12,6 +12,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.msGetUserMedia || n
 const video = document.querySelector("#video");
 const audio = document.querySelector("#audio");
 const canvas = document.querySelector("#canvas");
+
 // working with 2d contexxt
 const context = canvas.getContext("2d");
 let model;
@@ -30,7 +31,7 @@ function runDetection(){
         console.log(predictions);
         model.renderPredictions(predictions, canvas, context, video);
         if(predictions.length > 0){
-            //audio.play();
+            audio.play();
         }
     })
 }
