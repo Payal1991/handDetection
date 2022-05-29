@@ -21,16 +21,17 @@ handTrack.startVideo(video).then(status =>{
     if(status){
         navigator.getUserMedia({video: { }}, stream =>{
             video.scrObject = stream;
-            setInterval(runDetection, 1000);
+            setInterval(runDetection, 100);
         }, err=>console.log(err));
     }
 })
 
 function runDetection(){
     model.detect(video).then(predictions =>{
+        // console.log(predictions[0]['label'] == 'face');
         console.log(predictions);
         model.renderPredictions(predictions, canvas, context, video);
-        if(predictions.length > 0){
+        if(predictions[1]['label'] != 'face'){
             audio.play();
         }
     })
